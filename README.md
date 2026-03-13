@@ -19,13 +19,34 @@ This is a queuing model in which the arrival is Marcovian and departure distribu
 
 
 ## Experiment:
-
-
  
 ## Program
-![image](https://github.com/ramjan1729/Single-server-infinite-capacity---Markov-Model/assets/103921593/5f1fd58d-5929-4c51-89ea-4cef009e5bad)
+
+```
+developed by : naveen jaisanker
+reg. no. : 212224110039
+
+arrival_time = float(input("Enter mean interarrival time: "))
+service_time = float(input("Enter mean service time: "))
+
+lam = 1/arrival_time
+mu = 1/service_time
+
+L = lam/(mu-lam)
+Lq = lam**2/(mu*(mu-lam))
+W = 1/(mu-lam)
+Wq = lam/(mu*(mu-lam))
+
+print("Average number in system =", round(L,3))
+print("Average number in queue =", round(Lq,3))
+print("Waiting time in system =", round(W,3))
+print("Waiting time in queue =", round(Wq,3))
+```
 
 ## Output :
 
+![Screenshots](ss_4.png)
+
 ## Result :
 
+The average number of material in the sysytem and in the conveyor and waiting time are successfully found.
